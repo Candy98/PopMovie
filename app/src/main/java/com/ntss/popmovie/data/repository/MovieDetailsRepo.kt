@@ -13,5 +13,8 @@ class MovieDetailsRepo(private val apiService : TheMovieDBInterface) {
         return movieDetailsDataSource.downloadedMovieDetailsResponse
 
     }
-    
+    fun getMovieDetailsNetworkState():LiveData<NetworkState>{
+        return movieDetailsDataSource.networkState
+    }
+
 }
